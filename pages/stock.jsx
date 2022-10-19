@@ -30,13 +30,12 @@ export default function Stock() {
       <h2>Stock {stockAtual}</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button></button>
-          <button></button>
-          <button></button>
+          <button onClick={() => setStockAtual("Food")}></button>
+          <button onClick={() => setStockAtual("Pills")}></button>
+          <button onClick={() => setStockAtual("Vaccines")}></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">
-            <h3>Food</h3>
             {food.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
                 <div className="catInfos">

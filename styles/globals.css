@@ -351,3 +351,30 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
+/* ------------END-------------- */
+
+
+
+/* Stock */
+
+
+.StockReact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.StockBody {
+	display: flex;
+	flex-direction: row;
+}
+
+.StockMenu {
+	display: flex;
+	flex-direction: column;
+	position:fixed;
+	left: 12px;
+}
+
+/* ------------END-------------- */
