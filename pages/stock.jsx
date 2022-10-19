@@ -2,11 +2,69 @@ import { useState, useEffect } from "react";
 import Link from 'next/link'
 
 export default function Stock() {
+  const [stockAtual, setStockAtual] = useState("Food")
+  const [food, setFood] = useState([])
+  const [pills, setPills] = useState([])
+  const [vaccines, setVaccines] = useState([])
 
+  function attAllItems() {
+    const options = { method: 'GET' };
+
+    fetch('/api/stock', options)
+      .then(response => response.json())
+      .then(response => {
+        setFood(response.items.filter(e => e.itemType === "food"))
+        setPills(response.items.filter(e => e.itemType === "pills"))
+        setVaccines(response.items.filter(e => e.itemType === "vaccines"))
+        return
+      })
+
+      .catch(err => console.error(err));
+  }
+  useEffect(() => {
+    attAllItems()
+  }, []);
 
   return (
     <div className="StockReact">
-      
+      <h2>Stock {stockAtual}</h2>
+      <div className="StockBody">
+        <div className="StockMenu">
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div className="StockList">
+          {stockAtual === "Food" && <div className="food">
+            <h3>Food</h3>
+            {food.map((item, i) =>
+              <div key={`Item: ${i + 1}`}>
+                <div className="catInfos">
+                  <span>{item.quantidade}</span>
+                  <span>{item.validade}</span>
+                </div>
+              </div>)}
+          </div>}
+          {stockAtual === "Pills" && <div className="pills">
+            {pills.map((item, i) =>
+              <div key={`Item: ${i + 1}`}>
+                <div className="catInfos">
+                  <span>{item.quantidade}</span>
+                  <span>{item.validade}</span>
+                </div>
+              </div>)}
+          </div>}
+          {stockAtual === "Vaccines" && <div className="vaccines">
+            {vaccines.map((item, i) =>
+              <div key={`Item: ${i + 1}`}>
+                <div className="catInfos">
+                  <span>{item.quantidade}</span>
+                  <span>{item.validade}</span>
+                </div>
+              </div>)}
+          </div>}
+        </div>
+      </div>
     </div>
   );
 }
