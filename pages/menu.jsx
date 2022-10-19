@@ -4,6 +4,12 @@ import { useRouter } from "next/router";
 import { isLogged } from "./login";
 import { useEffect } from "react";
 
+/* Icons */
+
+import {FaCat} from "react-icons/fa"
+import {RiNumbersFill} from "react-icons/ri"
+import {AiFillHome} from "react-icons/ai"
+
 export function refreshPage() {
   window.location.reload();
 }
@@ -58,17 +64,17 @@ export default function Menu() {
       <div className="abas">
         <Link href="/home">
           <a>
-            <button disabled={router.asPath === "/home"}>Home</button>
+            <button disabled={router.asPath === "/home"}><AiFillHome/> Home</button>
           </a>
         </Link>
         <Link href="/cats">
           <a>
-            <button disabled={router.asPath === "/cats"}>Cats</button>
+            <button disabled={router.asPath === "/cats"}><FaCat/> Cats</button>
           </a>
         </Link>
         <Link href="/stock">
           <a>
-            <button disabled={router.asPath === "/stock"}>Stock</button>
+            <button disabled={router.asPath === "/stock"}><RiNumbersFill/> Stock</button>
           </a>
         </Link>
         <Link href="/page3">
