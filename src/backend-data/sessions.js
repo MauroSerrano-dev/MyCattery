@@ -1,7 +1,7 @@
 const { ObjectId } = require("mongodb");
 const { getMongoCollection } = require("./mongodb");
 
-const DATABASE = "mongo-mycattery";
+const DATABASE = "hack405";
 const SESSION_COLLECTION = "sessions";
 
 async function addSession(username) {

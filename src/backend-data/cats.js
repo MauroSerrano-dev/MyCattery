@@ -1,6 +1,6 @@
 const { getMongoCollection } = require("./mongodb");
 
-const DATABASE = "mongo-mycattery";
+const DATABASE = "hack405";
 const USER_COLLECTION = "cats";
 
 async function addCat(cat) {

@@ -1,6 +1,6 @@
 import { getMongoCollection } from "./mongodb";
 
-const DB_NAME = "mongo-mycattery";
+const DB_NAME = "hack405";
 const COLLECTION_NAME = "users";
 
 async function insertUser(user) {
