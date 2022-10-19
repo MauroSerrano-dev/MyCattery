@@ -102,6 +102,7 @@ a {
   height: 20px;
   background-color: #975C22;
   color: #F8F6F0;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   transition-duration: 400ms;
@@ -116,25 +117,32 @@ a {
   color: #F8F6F0;
   transition-duration: 400ms;
 }
+
+
 .isLoggedIn button{
   width: 100px;
-  height: 30px;
-  background-color: transparent;
-  border: 3px solid white;
+  height: 20px;
+  background-color: #975C22;
+  border: none;
+  color: #F8F6F0;
   border-radius: 5px;
+  transition-duration: 400ms;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .isLoggedIn button:hover{
   width: 100px;
   height: 30px;
-  background-color: darkred;
+  color: #F8F6F0;
+  background-color: #975C22;
+  transition-duration: 400ms;
 }
 .isLoggedIn button:disabled{
   width: 100px;
-  height: 30px;
+  height: 20px;
   background-color: transparent;
-  border: 2px solid darkgoldenrod;
-  color: white;
+  color: #975C22;
 }
 
 /* ------------END-------------- */
@@ -146,15 +154,15 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	
 }
 
 .screen {		
-	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
+	background: linear-gradient(90deg, #975C22, #C4955D);		
 	position: relative;	
 	height: 600px;
-	width: 360px;	
-	box-shadow: 0px 0px 24px #5C5696;
+	width: 500px;	
+	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
 }
 
 .screen__content {
@@ -191,7 +199,7 @@ a {
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: #6C63AC;	
+	background: #C4955D;	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -200,7 +208,7 @@ a {
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	background: linear-gradient(270deg, #975C22, #C4955D);
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -209,7 +217,7 @@ a {
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #7E7BB9;	
+	background: #975C22;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -229,26 +237,26 @@ a {
 .login__icon {
 	position: absolute;
 	top: 30px;
-	color: #7875B5;
+	color: #975C22;
 }
 
 .login__input {
 	border: none;
-	border-bottom: 2px solid #D1D1D4;
+	border-bottom: 2px solid #F8F6F0;
 	background: none;
 	padding: 10px;
 	padding-left: 24px;
 	font-weight: 700;
 	width: 75%;
 	transition: .2s;
-  color: #5D54A4;
+    color: #975C22;
 }
 
 .login__input:active,
 .login__input:focus,
 .login__input:hover {
 	outline: none;
-	border-bottom-color: #6A679E;
+	border-bottom-color: #C4955D;
 }
 
 .login__submit {
@@ -257,14 +265,14 @@ a {
 	margin-top: 30px;
 	padding: 16px 20px;
 	border-radius: 26px;
-	border: 1px solid #D4D3E8;
+	border: 1px solid #F8F6F0;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: flex;
 	align-items: center;
 	width: 100%;
-	color: #4C489D;
-	box-shadow: 0px 2px 2px #5C5696;
+	color: #975C22;
+	box-shadow: 0px 2px 2px #C4955D;
 	cursor: pointer;
 	transition: .2s;
 }
@@ -272,7 +280,7 @@ a {
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-	border-color: #6A679E;
+	border-color: #975C22;
 	outline: none;
 }
 
@@ -326,6 +334,6 @@ a {
 }
 
 .links a:hover {
-  color: #5C5696;
+  color: #975C22;
 }
 /* ------------END-------------- */
