@@ -75,7 +75,7 @@ a {
 .abas button:hover {
   width: 100px;
   height: 30px;
-  background-color: darkred;
+  background-color: blue;
 }
 
 .abas button:disabled {
