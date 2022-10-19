@@ -161,14 +161,15 @@ a {
 	background: linear-gradient(90deg, #975C22, #C4955D);		
 	position: relative;	
 	height: 600px;
-	width: 500px;	
+	width: 600px;	
 	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
 }
 
 .screen__content {
 	z-index: 1;
-	position: relative;	
+	position: relative;
 	height: 100%;
+	left: 40px;
 }
 
 .screen__background {		
@@ -190,8 +191,7 @@ a {
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #FFF;	
-	top: -50px;
+	background: #FFF;
 	right: 120px;	
 	border-radius: 0 72px 0 0;
 }
@@ -224,19 +224,21 @@ a {
 }
 
 .login {
-	width: 320px;
-	padding: 30px;
-	padding-top: 156px;
+	width: 400px;
+	padding: 50px;
+	padding-top: 125px;
 }
 
 .login__field {
-	padding: 20px 0px;	
+	padding: 10px 0px;	
 	position: relative;	
 }
 
 .login__icon {
 	position: absolute;
-	top: 30px;
+	font-size: 24px;
+	top: -40px;
+	margin-left: auto;
 	color: #975C22;
 }
 
@@ -245,7 +247,7 @@ a {
 	border-bottom: 2px solid #F8F6F0;
 	background: none;
 	padding: 10px;
-	padding-left: 24px;
+	padding-left: 30px;
 	font-weight: 700;
 	width: 75%;
 	transition: .2s;
@@ -285,9 +287,11 @@ a {
 }
 
 .button__icon {
+	position: absolute;
 	font-size: 24px;
+	top: 200px;
 	margin-left: auto;
-	color: #7875B5;
+	color: #975C22;
 }
 
 .social-login {	
@@ -322,18 +326,18 @@ a {
   flex-direction: column;
   align-items: center;
   position: relative;
-  left: 110px;
-  top: 90px;
+  left: 160px;
+  top: 150px;
 }
 
 .links a {
   margin: 5px 0;
   font-size: 0.75em;
-  color: white;
+  color: #F8F6F0;
   text-decoration: beige;
 }
 
 .links a:hover {
-  color: #975C22;
+  color: #C4955D;
 }
 /* ------------END-------------- */

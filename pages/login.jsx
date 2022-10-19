@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { refreshPage } from "./menu";
 import Link from "next/link";
+import PersonIcon from '@mui/icons-material/Person';
+import LockIcon from '@mui/icons-material/Lock';
 
 export default function Login() {
   const [usernameOrEmail, setUsernameOrEmail] = useState("");
@@ -57,7 +59,7 @@ export default function Login() {
             </div>
             <div className="login__field">
 
-              <i className="login__icon fas fa-lock"></i>
+              <i className="login__icon fas fa-lock"> <PersonIcon/> </i>
               <input
                 className="login__input"
                 type="password"
@@ -66,7 +68,7 @@ export default function Login() {
                 placeholder="Password"
               />
             </div>
-            <i className="button__icon fas fa-chevron-right"></i>
+            <i className="button__icon fas fa-chevron-right"> <LockIcon/> </i>
             <input
               value={"Log In Now"} type={"button"} className="button login__submit" onClick={() => setForm()} />
 
