@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "populate": "node src/task/populate.js",
-    "dev": "PORT=34050 next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,7 +15,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "backend": "*",
-    "mongodb": "^4.10.0",
+    "mongodb": "^4.11.0",
     "next": "^12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
