@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "populate": "node src/task/populate.js",
     "dev": "PORT=34050 next dev",
     "build": "next build",
     "start": "next start",
