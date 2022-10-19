@@ -1,4 +1,4 @@
-import { addCat, deleteCat } from "../../src/backend-data/cats";
+import { addCat, deleteCat, getAllCats } from "../../src/backend-data/cats";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

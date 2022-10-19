@@ -61,9 +61,9 @@ export default function Menu() {
             <button disabled={router.asPath === "/home"}>Home</button>
           </a>
         </Link>
-        <Link href="/page1">
+        <Link href="/cats">
           <a>
-            <button disabled={router.asPath === "/page1"}>Page 1</button>
+            <button disabled={router.asPath === "/cats"}>Cats</button>
           </a>
         </Link>
         <Link href="/stock">
