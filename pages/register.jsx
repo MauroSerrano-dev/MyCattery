@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Link from "next/link";
+
 
 export default function SignUp() {
 
@@ -36,49 +38,57 @@ export default function SignUp() {
 
 
   return (
-    <div className="signupMain">
-      <div className="box registerBox">
-        <form className="loginRegister" autoComplete="off">
-          <h2>Create an Account</h2>
-          <div className="inputBox">
+    <div className="containerLogin">
+      <div className="screen">
+        <div className="screen__background">
+          <span className="screen__background__shape screen__background__shape4"></span>
+          <span className="screen__background__shape screen__background__shape3"></span>
+          <span className="screen__background__shape screen__background__shape2"></span>
+          <span className="screen__background__shape screen__background__shape1"></span>
+        </div>
+        <div className="screen__content">
+          <form className="login">
+            <div className="login__field">
+              <input
+                className="login__input"
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+                placeholder="Username"
+              />
+            </div>
+            <div className="login__field">
+              <input
+                className="login__input"
+                type="text"
+                onChange={(e) => setUserEmail(e.target.value)}
+                placeholder="Email"
+              />
+            </div>
+            <div className="login__field">
+              <i className="login__icon fas fa-lock"></i>
+              <input
+                className="login__input"
+                type="password"
+                value={userpassword}
+                onChange={(e) => setUserPassword(e.target.value)}
+                placeholder="Password"
+              />
+            </div>
+            <div className="login__field">
+              <i className="login__icon fas fa-lock"></i>
+              <input
+                className="login__input"
+                type="password"
+                value={passwordConfirmation}
+                onChange={(e) => setPasswordConfirmation(e.target.value)}
+                placeholder="Password Confirmation"
+              />
+            </div>
+            <i className="button__icon fas fa-chevron-right"></i>
             <input
-              type="text"
-              value={username}
-              onChange={(e) => setUserName(e.target.value)}
-            />
-            <span>Username</span>
-            <i></i>
-          </div>
-          <div className="inputBox">
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setUserEmail(e.target.value)}
-            />
-            <span>Email</span>
-            <i></i>
-          </div>
-          <div className="inputBox">
-            <input
-              type="password"
-              value={userpassword}
-              onChange={(e) => setUserPassword(e.target.value)}
-            />
-            <span>Password</span>
-            <i></i>
-          </div>
-          <div className="inputBox">
-            <input
-              type="password"
-              value={passwordConfirmation}
-              onChange={(e) => setPasswordConfirmation(e.target.value)}
-            />
-            <span>Confirm Password</span>
-            <i></i>
-          </div>
-          <input className="inputLogin" value={"Register"} type={"button"} onClick={() => setForm()}></input>
-          <p>{registerError}</p>
-        </form>
+              value={"Sign in"} type={"button"} className="button login__submit" onClick={() => setForm()} />
+          </form>
+        </div>
       </div>
     </div>
   );

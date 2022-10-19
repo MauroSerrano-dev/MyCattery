@@ -2,18 +2,25 @@ import { useState, useEffect } from "react";
 import Link from 'next/link'
 
 export default function Cats() {
-  function getAllCats() {
+  const [cats, setCats] = useState([])
+
+  function attAllCats() {
     const options = { method: 'GET' };
 
     fetch('/api/cats', options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => setCats(response.cats))
       .catch(err => console.error(err));
   }
+  useEffect(() => {
+    attAllCats()
+  }, []);
 
   return (
     <div className="CatsReact">
-      <button onClick={() => getAllCats()}></button>
+      <div className="cats">
+        {cats?.map((cat, i) => <div key={`Cat: ${i + 1}`}>{cat.name}</div>)}
+      </div>
     </div>
   );
 }
