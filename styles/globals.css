@@ -376,6 +376,8 @@ a {
 
 .StockMenu>button {
 	color: #975C22;
+	background-color: transparent;
+	border: none;
 }
 
 /* ------------END-------------- */
