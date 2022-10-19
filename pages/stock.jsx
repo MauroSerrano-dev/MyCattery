@@ -26,6 +26,8 @@ export default function Stock() {
 
       .catch(err => console.error(err));
   }
+
+
   useEffect(() => {
     attAllItems()
   }, []);
@@ -72,3 +74,4 @@ export default function Stock() {
     </div>
   );
 }
+

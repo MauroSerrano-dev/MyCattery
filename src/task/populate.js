@@ -118,409 +118,409 @@ const cats = [
 
 const stock = [
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Milpro",
         quantidade: "134",
         validade: "03/12/22"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Acticam",
         quantidade: "56",
         validade: "07/07/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Cerenia",
         quantidade: "35",
         validade: "10/04/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Propalin",
         quantidade: "4",
         validade: "29/08/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Vectra 3D",
         quantidade: "43",
         validade: "25/05/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Amodip 1.25",
         quantidade: "18",
         validade: "03/08/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Apoquel 3.6",
         quantidade: "67",
         validade: "28/09/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Banacep 5mg",
         quantidade: "89",
         validade: "25/04/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "Lisina Aid",
         quantidade: "5",
         validade: "03/01/23"
     },
     {
-        typeItem: "Pills",
+        itemType: "pills",
         nome: "We Confort",
         quantidade: "7",
         validade: "07/10/23"
     },
     {
-        typeItem: "Vaccines",
+        itemType: "vaccines",
         nome: "Nobivac tricat",
         quantidade: "54",
         validade: "12/03/24"
     },
     {
-        typeItem: "Vaccines",
+        itemType: "vaccines",
         nome: "Nobivac Rabies",
         quantidade: "45",
         validade: "17/07/24"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Satiety Weight Management Cat 7kg",
         quantidade: "7000",
         validade: "24/05/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Satiety Weight Management Cat 7kg",
         quantidade: "7000",
         validade: "24/05/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Satiety Weight Management Cat 7kg",
         quantidade: "7000",
         validade: "24/05/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Growth 2kg",
         quantidade: "2000",
         validade: "22/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Weaning 4kg",
         quantidade: "4000",
         validade: "27/09/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Diabetic 7kg",
         quantidade: "7000",
         validade: "08/06/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Diabetic 7kg",
         quantidade: "7000",
         validade: "08/06/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Diabetic 7kg",
         quantidade: "7000",
         validade: "08/06/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Royal Canin Cat Renal 2kg",
         quantidade: "2000",
         validade: "27/07/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Salmon 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Salmon 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Salmon 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Salmon 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Chicken 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Chicken 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Cat Sterilized Chicken 10kg",
         quantidade: "10000",
         validade: "19/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Proplan Purina Adult Cat 10kg",
         quantidade: "10000",
         validade: "03/08/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Hill's K/D Cat 2kg",
         quantidade: "10000",
         validade: "28/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Hill's K/D Cat 2kg",
         quantidade: "10000",
         validade: "28/02/23"
     },
     {
-        typeItem: "Food",
+        itemType: "food",
         nome: "Hill's K/D Cat 2kg",
         quantidade: "10000",
         validade: "28/02/23"
