@@ -47,10 +47,17 @@ export default function Home() {
 
   return (
     <div className="DashboardReact">
+      <div className="grafics">
       <div className="foodGrafic">
         <h2>Porções restantes: {(totalFood / ONE_PORTION).toFixed(1)}</h2>
         <h2>Dias de ração restantes: {(totalFood / (cats.length * ONE_PORTION)).toFixed(1)} dias</h2>
         <h2>Comida total: {(totalFood / 1000).toFixed(1)} Kg</h2>
+      </div>
+      <div className="chartGrafic">
+        </div>
+      </div>
+      <div className="alerta">
+        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) && alert("Eu sou o Pedro")}
       </div>
     </div>
   );
