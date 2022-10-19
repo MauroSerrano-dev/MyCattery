@@ -341,3 +341,13 @@ a {
   color: #C4955D;
 }
 /* ------------END-------------- */
+
+
+
+/* Footer */
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
