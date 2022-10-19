@@ -19,8 +19,8 @@ export default function Home() {
         setFood(response.items.filter(e => e.itemType === "food"))
         setTotalFood(
           response.items
-          .filter(e => e.itemType === "food")
-          .reduce((acc, oneFood) => acc + Number(oneFood.quantidade), 0))
+            .filter(e => e.itemType === "food")
+            .reduce((acc, oneFood) => acc + Number(oneFood.quantidade), 0))
         return
       })
 
@@ -47,9 +47,11 @@ export default function Home() {
 
   return (
     <div className="DashboardReact">
-      <h2>Porções restantes: {(totalFood / ONE_PORTION).toFixed(1)}</h2>
-      <h2>Dias de ração restantes: {(totalFood / (cats.length * ONE_PORTION)).toFixed(1)} dias</h2>
-      <h2>Comida total: {(totalFood / 1000).toFixed(1)} Kg</h2>
+      <div className="foodGrafic">
+        <h2>Porções restantes: {(totalFood / ONE_PORTION).toFixed(1)}</h2>
+        <h2>Dias de ração restantes: {(totalFood / (cats.length * ONE_PORTION)).toFixed(1)} dias</h2>
+        <h2>Comida total: {(totalFood / 1000).toFixed(1)} Kg</h2>
+      </div>
     </div>
   );
 }

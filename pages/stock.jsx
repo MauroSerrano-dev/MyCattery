@@ -37,17 +37,23 @@ export default function Stock() {
       <h2>Stock {stockAtual}</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon/></button>
-          <button onClick={() => setStockAtual("Pills")}><MedicationIcon/></button>
-          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon/></button>
+          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon /></button>
+          <button onClick={() => setStockAtual("Pills")}><MedicationIcon /></button>
+          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon /></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">
+            <div className="StockHeader">
+              <span>Name</span>
+              <span>Expiration date</span>
+              <span>Quantity</span>
+            </div>
             {food.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
                 <div className="catInfos">
-                  <span>{item.quantidade}</span>
+                  <span>{item.nome}</span>
                   <span>{item.validade}</span>
+                  <span>{item.quantidade}</span>
                 </div>
               </div>)}
           </div>}
