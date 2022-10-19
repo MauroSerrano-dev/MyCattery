@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 
+/* Icons */
+import VaccinesIcon from '@mui/icons-material/Vaccines';
+import MedicationIcon from '@mui/icons-material/Medication';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
+
 export default function Stock() {
   const [stockAtual, setStockAtual] = useState("Food")
   const [food, setFood] = useState([])
@@ -30,9 +35,9 @@ export default function Stock() {
       <h2>Stock {stockAtual}</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button onClick={() => setStockAtual("Food")}></button>
-          <button onClick={() => setStockAtual("Pills")}></button>
-          <button onClick={() => setStockAtual("Vaccines")}></button>
+          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon/></button>
+          <button onClick={() => setStockAtual("Pills")}><MedicationIcon/></button>
+          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon/></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">
