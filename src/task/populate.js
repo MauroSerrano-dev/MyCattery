@@ -29,12 +29,90 @@ async function addToStock(item) {
     const collection = await getMongoCollection(DATABASE, STOCK_COLLECTION);
     const result = await collection.insertOne(item);
     return result;
-  }
+}
 
 const cats = [
-    { a: 3 },
-    { a: 3 },
-    { a: 3 },
+    {
+        name: "Cleo",
+        photo: "Cleo.jpg",
+        gender: "female",
+        age: "2 months",
+        castrado: false,
+        cor: "tartaruga",
+        personalidade: "hiperativa"
+    },
+    {
+        name: "Cleopatra",
+        photo: "Cleopatra.jpg",
+        gender: "female",
+        age: "1 year old",
+        castrado: true,
+        cor: "tartaruga",
+        personalidade: "sociavel"
+    },
+    {
+        name: "Floquinho",
+        photo: "Floquinho.jpg",
+        gender: "male",
+        age: "2 months",
+        castrado: false,
+        cor: "branco",
+        personalidade: "sociavel"
+    },
+    {
+        name: "Frankie",
+        photo: "Frankie.jpg",
+        gender: "male",
+        age: "1 year old",
+        castrado: true,
+        cor: "laranja",
+        personalidade: "arisco"
+    },
+    {
+        name: "Isa",
+        photo: "Isa.jpg",
+        gender: "female",
+        age: "5 years old",
+        castrado: true,
+        cor: "Branco e cinza",
+        personalidade: "medrosa"
+    },
+    {
+        name: "Pamela",
+        photo: "Pamela.jpg",
+        gender: "female",
+        age: "4 months",
+        castrado: false,
+        cor: "Tigrada",
+        personalidade: "sociavel"
+    },
+    {
+        name: "Sebastião",
+        photo: "Sebastião.jpg",
+        gender: "male",
+        age: "2 months",
+        castrado: false,
+        cor: "Branco e preto",
+        personalidade: "hiperativo"
+    },
+    {
+        name: "Tsuki",
+        photo: "Tsuki.jpg",
+        gender: "male",
+        age: "2 months",
+        castrado: false,
+        cor: "Neve",
+        personalidade: "sociavel"
+    },
+    {
+        name: "Winnie",
+        photo: "Winnie.jpg",
+        gender: "female",
+        age: "1 ano",
+        castrado: true,
+        cor: "Laranja",
+        personalidade: "arisca"
+    },
 ]
 
 const stock = [

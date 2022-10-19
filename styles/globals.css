@@ -1,148 +1,150 @@
 button:enabled:hover {
-  cursor: pointer
+	cursor: pointer
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
-  /* border: 1px solid red; */
+	box-sizing: border-box;
+	/* border: 1px solid red; */
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+	html {
+		color-scheme: dark;
+	}
 
-  body {
-    color: #975C22;
-    background: #F8F6F0;
-  }
+	body {
+		color: #975C22;
+		background: #F8F6F0;
+	}
 }
 
 /* Menu */
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 80px;
-  margin-bottom: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 70px;
 
 }
 
 .abas {
-  display: flex;
-  position: absolute;
-  top: 28px;
-  left: 10px;
-  gap: 10px;
+	display: flex;
+	position: absolute;
+	top: 28px;
+	left: 10px;
+	gap: 10px;
 
 }
-.isLoggedIn{
-  position: absolute;
-  top: 28px;
-  right: 50px;
-  display: flex;
-  gap: 10px;
-  
+
+.isLoggedIn {
+	position: absolute;
+	top: 28px;
+	right: 50px;
+	display: flex;
+	gap: 10px;
+
 }
 
 .abas button {
-  width: 100px;
-  height: 30px;
-  background-color: #C4955D;
-  border: none;
-  border-radius: 5px;
-  color: #F8F6F0;
-  transition-duration: 400ms;
-  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+	width: 100px;
+	height: 30px;
+	background-color: #C4955D;
+	border: none;
+	border-radius: 5px;
+	color: #F8F6F0;
+	transition-duration: 400ms;
+	-webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .abas button:hover {
-  width: 100px;
-  height: 30px;
-  background-color: #975C22;
-  transition-duration: 400ms;
+	width: 100px;
+	height: 30px;
+	background-color: #975C22;
+	transition-duration: 400ms;
 }
 
 .abas button:disabled {
-  width: 100px;
-  height: 30px;
-  background-color: #975C22;
-  color: #C4955D;
+	width: 100px;
+	height: 30px;
+	background-color: #975C22;
+	color: #C4955D;
 }
 
 .auth {
-  position: absolute;
-  top: 28px;
-  right: 50px;
-  display: flex;
-  gap: 5px;
+	position: absolute;
+	top: 28px;
+	right: 50px;
+	display: flex;
+	gap: 5px;
 }
 
 .auth button {
-  width: 100px;
-  height: 20px;
-  background-color: #975C22;
-  color: #F8F6F0;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition-duration: 400ms;
-  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+	width: 100px;
+	height: 20px;
+	background-color: #975C22;
+	color: #F8F6F0;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	transition-duration: 400ms;
+	-webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .auth button:hover {
-  width: 100px;
-  height: 30px;
-  background-color: #C4955D;
-  color: #F8F6F0;
-  transition-duration: 400ms;
+	width: 100px;
+	height: 30px;
+	background-color: #C4955D;
+	color: #F8F6F0;
+	transition-duration: 400ms;
 }
 
 
-.isLoggedIn button{
-  width: 100px;
-  height: 20px;
-  background-color: #975C22;
-  border: none;
-  color: #F8F6F0;
-  border-radius: 5px;
-  transition-duration: 400ms;
-  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+.isLoggedIn button {
+	width: 100px;
+	height: 20px;
+	background-color: #975C22;
+	border: none;
+	color: #F8F6F0;
+	border-radius: 5px;
+	transition-duration: 400ms;
+	-webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
-.isLoggedIn button:hover{
-  width: 100px;
-  height: 30px;
-  color: #F8F6F0;
-  background-color: #975C22;
-  transition-duration: 400ms;
+.isLoggedIn button:hover {
+	width: 100px;
+	height: 30px;
+	color: #F8F6F0;
+	background-color: #975C22;
+	transition-duration: 400ms;
 }
-.isLoggedIn button:disabled{
-  width: 100px;
-  height: 20px;
-  background-color: transparent;
-  color: #975C22;
+
+.isLoggedIn button:disabled {
+	width: 100px;
+	height: 20px;
+	background-color: transparent;
+	color: #975C22;
 }
 
 /* ------------END-------------- */
@@ -154,14 +156,14 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 }
 
-.screen {		
-	background: linear-gradient(90deg, #975C22, #C4955D);		
-	position: relative;	
+.screen {
+	background: linear-gradient(90deg, #975C22, #C4955D);
+	position: relative;
 	height: 600px;
-	width: 600px;	
+	width: 600px;
 	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
 }
 
@@ -172,7 +174,7 @@ a {
 	left: 40px;
 }
 
-.screen__background {		
+.screen__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -180,7 +182,7 @@ a {
 	bottom: 0;
 	z-index: 0;
 	-webkit-clip-path: inset(0 0 0 0);
-	clip-path: inset(0 0 0 0);	
+	clip-path: inset(0 0 0 0);
 }
 
 .screen__background__shape {
@@ -192,16 +194,16 @@ a {
 	height: 520px;
 	width: 520px;
 	background: #FFF;
-	right: 120px;	
+	right: 120px;
 	border-radius: 0 72px 0 0;
 }
 
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: #C4955D;	
+	background: #C4955D;
 	top: -172px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
@@ -210,16 +212,16 @@ a {
 	width: 190px;
 	background: linear-gradient(270deg, #975C22, #C4955D);
 	top: -24px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #975C22;	
+	background: #975C22;
 	top: 420px;
-	right: 50px;	
+	right: 50px;
 	border-radius: 60px;
 }
 
@@ -230,8 +232,8 @@ a {
 }
 
 .login__field {
-	padding: 10px 0px;	
-	position: relative;	
+	padding: 10px 0px;
+	position: relative;
 }
 
 .login__icon {
@@ -251,7 +253,7 @@ a {
 	font-weight: 700;
 	width: 75%;
 	transition: .2s;
-    color: #975C22;
+	color: #975C22;
 }
 
 .login__input:active,
@@ -294,7 +296,7 @@ a {
 	color: #975C22;
 }
 
-.social-login {	
+.social-login {
 	position: absolute;
 	height: 140px;
 	width: 160px;
@@ -313,33 +315,34 @@ a {
 .social-login__icon {
 	padding: 20px 10px;
 	color: #fff;
-	text-decoration: none;	
+	text-decoration: none;
 	text-shadow: 0px 0px 8px #7875B5;
 }
 
 .social-login__icon:hover {
-	transform: scale(1.5);	
+	transform: scale(1.5);
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  left: 160px;
-  top: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	left: 160px;
+	top: 150px;
 }
 
 .links a {
-  margin: 5px 0;
-  font-size: 0.75em;
-  color: #F8F6F0;
-  text-decoration: beige;
+	margin: 5px 0;
+	font-size: 0.75em;
+	color: #F8F6F0;
+	text-decoration: beige;
 }
 
 .links a:hover {
-  color: #C4955D;
+	color: #C4955D;
 }
+
 /* ------------END-------------- */
 
 
@@ -365,6 +368,7 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 .StockBody {
 	display: flex;
 	flex-direction: row;
@@ -373,12 +377,51 @@ a {
 .StockMenu {
 	display: flex;
 	flex-direction: column;
-	position:fixed;
+	position: fixed;
 	left: 12px;
 }
 
 .StockMenu>button {
 	color: #975C22;
 }
+
+/* ------------END-------------- */
+
+/* Stock */
+.CatsReact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cats {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-evenly;
+}
+
+.cat {
+	width: 350px;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.catInfos {
+	display: flex;
+	flex-direction: row;
+	gap: 35px;
+}
+
+.cat img {
+	border-radius: 360px;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+}
+
 
 /* ------------END-------------- */

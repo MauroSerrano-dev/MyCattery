@@ -21,12 +21,12 @@ export default function Cats() {
       <h2>Cats</h2>
       <div className="cats">
         {cats.map((cat, i) =>
-          <div key={`Cat: ${i + 1}`}>
-            <img className="catsPhotos" alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
+          <div className="cat" key={`Cat: ${i + 1}`}>
+            <img alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
             <div className="catInfos">
               <span>{cat.name}</span>
-              <span>{cat.sexo}</span>
-              <span>{cat.nasceu}</span>
+              <span>{cat.gender}</span>
+              <span>{cat.age}</span>
             </div>
           </div>)}
       </div>
