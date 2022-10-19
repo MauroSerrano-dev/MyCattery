@@ -1,3 +1,9 @@
+@font-face {
+	font-family: 'Poppins';
+	src: url(https://fonts.google.com/share?selection.family=Poppins:wght@300%7CRoboto%20Mono:wght@300;400);
+}
+
+
 button:enabled:hover {
 	cursor: pointer
 }
