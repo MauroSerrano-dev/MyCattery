@@ -13,4 +13,7 @@ export default async function handler(req, res) {
     await deleteCat(id);
     res.status(200).json({ mensagem: "Cat deleted."});
   }
+  else if (req.method === "GET") {
+    return res.status(200).json({ cats: await getAllCats() });
+  }
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 
-export default function Page1() {
+export default function Cats() {
 
 
   return (
-    <div className="Page1">
+    <div className="CatsReact">
     </div>
   );
 }

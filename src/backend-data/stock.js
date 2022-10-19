@@ -15,7 +15,15 @@ async function deleteItem(id) {
   const result = await collection.deleteOne({ _id: new ObjectId(id) });
   return result;
 }
+
+async function getAllItems() {
+  const collection = await getMongoCollection(DATABASE, STOCK_COLLECTION);
+  const result = await collection.find().toArray();
+  return result;
+}
+
 export {
     addToStock,
-    deleteItem
+    deleteItem,
+    getAllItems
 }

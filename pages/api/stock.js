@@ -1,4 +1,4 @@
-import { addToStock, deleteItem } from "../../src/backend-data/stock";
+import { addToStock, deleteItem, getAllItems } from "../../src/backend-data/stock";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -11,5 +11,8 @@ export default async function handler(req, res) {
     const { id } = req.body;
     await deleteItem(id);
     res.status(200).json({ mensagem: "Item deleted." });
+  }
+  else if (req.method === "GET") {
+    return res.status(200).json({ items: await getAllItems() });
   }
 }

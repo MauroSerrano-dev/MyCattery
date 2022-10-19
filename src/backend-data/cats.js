@@ -14,7 +14,14 @@ async function deleteCat(id) {
   const result = await collection.deleteOne({ _id: new ObjectId(id) });
   return result;
 }
+
+async function getAllCats() {
+  const collection = await getMongoCollection(DATABASE, CATS_COLLECTION);
+  const result = await collection.find().toArray();
+  return result;
+}
 export {
     addCat,
-    deleteCat
+    deleteCat,
+    getAllCats
 }
