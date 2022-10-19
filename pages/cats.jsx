@@ -18,8 +18,17 @@ export default function Cats() {
 
   return (
     <div className="CatsReact">
+      <h2>Cats</h2>
       <div className="cats">
-        {cats?.map((cat, i) => <div key={`Cat: ${i + 1}`}>{cat.name}</div>)}
+        {cats.map((cat, i) =>
+          <div key={`Cat: ${i + 1}`}>
+            <img className="catsPhotos" alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
+            <div className="catInfos">
+              <span>{cat.name}</span>
+              <span>{cat.sexo}</span>
+              <span>{cat.nasceu}</span>
+            </div>
+          </div>)}
       </div>
     </div>
   );
