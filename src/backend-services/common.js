@@ -15,13 +15,12 @@ function validateEmail(email) {
 }
 
 function checkPasswordStrength(password) {
-    if (password.length < 8) return 0;
+    if (password.length < 4) return 0;
     const regexes = [
         /[a-z]/,
         /[A-Z]/,
-        /[0-9]/,
-        /[~!@#$%^&*)(+=._-]/
-    ]
+        /[0-9]/
+        ]
     return regexes
         .map(re => re.test(password))
         .reduce((score, t) => t ? score + 1 : score, 0)

@@ -1,4 +1,4 @@
-import { addCat } from "../../src/backend-data/cats";
+import { addCat, deleteCat } from "../../src/backend-data/cats";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -7,5 +7,10 @@ export default async function handler(req, res) {
         message: "Gatinho Criado com Sucesso!",
         _id: id,
       });
+  }
+  else if (req.method === "DELETE") {
+    const { id } = req.body;
+    await deleteCat(id);
+    res.status(200).json({ mensagem: "Cat deleted."});
   }
 }

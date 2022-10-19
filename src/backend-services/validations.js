@@ -55,8 +55,8 @@ function getPasswordErrors(password) {
     if (password.length < 4) {
         return "A sua password deve ter no mínimo 4 caracteres."
     }
-    if (checkPasswordStrength(password) < 2) {
-        return "A sua password deve ter pelo menos um número, uma mínuscula, uma maiúscula e um símbolo."
+    if (checkPasswordStrength(password) < 3) {
+        return "A sua password deve ter pelo menos um número, uma mínuscula e uma maiúscula."
     }
 }
 
