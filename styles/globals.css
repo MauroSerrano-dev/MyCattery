@@ -472,8 +472,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	margin-top: -25px;
+	margin-top: -50px;
 	gap: 2px;
+	top: 27px;
 	left: 103%;
 }
 
@@ -492,6 +493,7 @@ a {
 	justify-content: center;
 	padding: 10px;
 	padding-right: 20px;
+	padding-bottom: 0px;
 }
 
 .StockList {
@@ -615,4 +617,14 @@ a {
 	width: 40px;
 	height: 40px;
 	transition-duration: 400ms;
+}
+
+.deleteItem{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: -17px;
+	left: 106.3%;
 }

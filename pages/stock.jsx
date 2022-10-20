@@ -130,7 +130,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "food")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "food")} className="stockButton">-</button>
                   </div>
-                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
                 </div>
               </div>)}
           </div>}
@@ -150,7 +150,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "pills")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "pills")} className="stockButton">-</button>
                   </div>
-                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
                 </div>
               </div>)}
           </div>}
@@ -170,7 +170,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "vaccines")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "vaccines")} className="stockButton">-</button>
                   </div>
-                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
                 </div>
               </div>)}
           </div>}
