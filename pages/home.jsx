@@ -59,10 +59,6 @@ export default function Home() {
       </div>
       <div className="chartGrafic">
         </div>
-      <div className="alerta">
-        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) < 7 && <Alert className="alert" severity="warning">This is a warning alert — check it out!</Alert>}
-        <Image src={nekoAlert} alt="neko" width="100px" height="100px"/>
-      </div>
       </div>
       
     </div>
