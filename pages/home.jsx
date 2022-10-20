@@ -94,7 +94,6 @@ export default function Home() {
             "donutColor": "hsl(277, 70%, 50%)"
           }]} />
           }
-          
         </div>
       </div>
     </div>

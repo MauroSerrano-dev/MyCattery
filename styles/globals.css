@@ -440,6 +440,15 @@ a {
 	width: 250px;
 	height: 250px;
 	object-fit: cover;
+	transition-duration: 400ms;
+
+}
+.cat img:hover{
+	transition-duration: 400ms;
+	border-radius: 360px;
+	width: 270px;
+	height: 270px;
+	object-fit: cover;
 }
 
 .StockHeader {
@@ -640,4 +649,18 @@ a {
 
 .chartGrafic {
 	height: 400px;
+}
+.catProfileReact{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.catFoto{
+	width: 500px;
+	height: 500px;
+	border-radius: 20px;
+	object-fit: cover;
 }
