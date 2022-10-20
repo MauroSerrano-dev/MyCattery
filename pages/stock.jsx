@@ -6,6 +6,7 @@ import VaccinesIcon from '@mui/icons-material/Vaccines';
 import MedicationIcon from '@mui/icons-material/Medication';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import { BiSearchAlt } from "react-icons/bi"
+import {HiTrash} from "react-icons/hi"
 
 export default function Stock() {
   const [stockAtual, setStockAtual] = useState("Food")
@@ -130,7 +131,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "food")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "food")} className="stockButton">-</button>
                   </div>
-                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"><HiTrash /></button>
                 </div>
               </div>)}
           </div>}
