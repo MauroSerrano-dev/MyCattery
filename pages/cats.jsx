@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { BsGenderFemale } from "react-icons/bs"
 import { BsGenderMale } from "react-icons/bs"
+import { BiSearchAlt } from "react-icons/bi"
 
 export default function Cats() {
   const [cats, setCats] = useState([])
@@ -24,7 +25,11 @@ export default function Cats() {
 
   return (
     <div className="CatsReact">
-      <input type={"text"} onChange={(e) => setSearch(e.target.value)} />
+      <div className="contentInputSearchCats">
+        <BiSearchAlt className="iconInputSearchCats"/>
+        <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
+      </div>
+      
       <h2>Cats</h2>
       <div className="cats">
         {cats.map((cat, i) =>

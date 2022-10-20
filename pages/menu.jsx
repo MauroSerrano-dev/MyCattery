@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 import {FaCat} from "react-icons/fa"
 import {RiNumbersFill} from "react-icons/ri"
-import {AiFillHome} from "react-icons/ai"
+import {MdSpaceDashboard} from "react-icons/md"
 
 export function refreshPage() {
   window.location.reload();
@@ -64,7 +64,7 @@ export default function Menu() {
       <div className="abas">
         <Link href="/home">
           <a>
-            <button disabled={router.asPath === "/home"}><AiFillHome/> Home</button>
+            <button disabled={router.asPath === "/home"}><MdSpaceDashboard /> Dashboard</button>
           </a>
         </Link>
         <Link href="/cats">
