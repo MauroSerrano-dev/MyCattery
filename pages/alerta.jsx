@@ -6,7 +6,6 @@ import { Alert } from "@mui/material";
 const ONE_PORTION = 150
 
 export default function Alerta() {
-    const [isLogged, setIsLogged] = useState()
     const [totalFood, setTotalFood] = useState(0)
     const [cats, setCats] = useState([])
 
@@ -16,8 +15,6 @@ export default function Alerta() {
         fetch('/api/stock', options)
           .then(response => response.json())
           .then(response => {
-            console.log(response.items.filter(e => e.itemType === "food"))
-            setFood(response.items.filter(e => e.itemType === "food"))
             setTotalFood(
               response.items
                 .filter(e => e.itemType === "food")
@@ -41,7 +38,6 @@ export default function Alerta() {
       }
     
       useEffect(() => {
-        setIsLogged(localStorage.length > 0)
         getAllFood()
         getAllCats()
       }, []);

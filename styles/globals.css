@@ -473,7 +473,7 @@ a {
 	position: relative;
 	margin-top: -25px;
 	gap: 2px;
-	left: 101%;
+	left: 103%;
 }
 
 .stockQuantidade {
@@ -488,8 +488,9 @@ a {
 .itemInfos {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	padding-bottom: 20px;
+	justify-content: center;
+	padding: 10px;
+	padding-right: 20px;
 }
 
 .StockList {
