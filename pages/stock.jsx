@@ -41,15 +41,21 @@ export default function Stock() {
     const json = await response.json();
   }
 
-  function handleQuantChange(action, index) {
-    const newQuantidade = action === "plus" ? String(Number(food[index].quantidade) + 1) : String(Number(food[index].quantidade) - 1)
-    const obj = food[index]
+  function handleQuantChange(action, index, type) {
+    const newQuantidade = type === "food"
+      ? (action === "plus" ? String(Number(food[index].quantidade) + 150) : String(Number(food[index].quantidade) - 150))
+      : (type === "pills"
+        ? (action === "plus" ? String(Number(pills[index].quantidade) + 1) : String(Number(pills[index].quantidade) - 1))
+        : (action === "plus" ? String(Number(vaccines[index].quantidade) + 1) : String(Number(vaccines[index].quantidade) - 1))
+      )
+    const obj = type === "food" ? food[index] : (type === "pills" ? pills[index] : vaccines[index])
+    console.log(obj)
     updateStockFront({ ...obj, quantidade: newQuantidade })
   }
 
   useEffect(() => {
     attAllItems()
-  }, [food]);
+  }, [food, pills, vaccines]);
 
   useEffect(() => {
     attAllItems()
@@ -76,22 +82,31 @@ export default function Stock() {
                 <div className="itemInfos">
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
-                  <span className="stockQuantidade">{item.quantidade}g
-                  </span>
+                  <span className="stockQuantidade">{item.quantidade}g</span>
                   <div className="stockButtons">
-                    <button onClick={() => handleQuantChange("plus", i)} className="stockButton">+</button>
-                    <button onClick={() => handleQuantChange("less", i)} className="stockButton">-</button>
+                    <button onClick={() => handleQuantChange("plus", i, "food")} className="stockButton">+</button>
+                    <button onClick={() => handleQuantChange("less", i, "food")} className="stockButton">-</button>
                   </div>
 
                 </div>
               </div>)}
           </div>}
           {stockAtual === "Pills" && <div className="pills">
+            <div className="StockHeader">
+              <span>Name</span>
+              <span>Validade</span>
+              <span>Quantidadee</span>
+            </div>
             {pills.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
-                  <span>{item.quantidade}</span>
-                  <span>{item.validade}</span>
+                  <span className="stockItemName">{item.nome}</span>
+                  <span className="stockValidade">{item.validade}</span>
+                  <span className="stockQuantidade">{item.quantidade}</span>
+                  <div className="stockButtons">
+                    <button onClick={() => handleQuantChange("plus", i, "pills")} className="stockButton">+</button>
+                    <button onClick={() => handleQuantChange("less", i, "pills")} className="stockButton">-</button>
+                  </div>
                 </div>
               </div>)}
           </div>}
@@ -99,8 +114,13 @@ export default function Stock() {
             {vaccines.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
-                  <span>{item.quantidade}</span>
-                  <span>{item.validade}</span>
+                  <span className="stockItemName">{item.nome}</span>
+                  <span className="stockValidade">{item.validade}</span>
+                  <span className="stockQuantidade">{item.quantidade}</span>
+                  <div className="stockButtons">
+                    <button onClick={() => handleQuantChange("plus", i, "vaccines")} className="stockButton">+</button>
+                    <button onClick={() => handleQuantChange("less", i, "vaccines")} className="stockButton">-</button>
+                  </div>
                 </div>
               </div>)}
           </div>}
