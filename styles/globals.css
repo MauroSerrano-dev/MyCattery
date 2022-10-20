@@ -428,8 +428,11 @@ a {
 
 .catInfos {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: row;
 	gap: 35px;
+	margin-top: 10px;
 }
 
 .cat img {

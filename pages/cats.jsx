@@ -57,7 +57,7 @@ export default function Cats() {
           <div className="cat" key={`Cat: ${i + 1}`}>
             <Link href={`/cat-profile?cat=${cat._id}`}>
               <a>
-                <img alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
+                <img alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`} className="catImg"></img>
               </a>
             </Link>
             <div className="catInfos">
