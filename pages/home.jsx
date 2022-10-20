@@ -4,6 +4,7 @@ import { getAllFoodKg } from "./stock";
 import { Alert } from "@mui/material";
 import Image from "next/image"
 import nekoAlert from "../public/icones/neko/Neko2-09.png"
+import Chart from "./chart";
 const ONE_PORTION = 150
 
 export default function Home() {
