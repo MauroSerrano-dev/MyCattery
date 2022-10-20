@@ -5,6 +5,7 @@ import Link from 'next/link'
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import MedicationIcon from '@mui/icons-material/Medication';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import { BiSearchAlt } from "react-icons/bi"
 
 export default function Stock() {
   const [stockAtual, setStockAtual] = useState("Food")
@@ -12,6 +13,8 @@ export default function Stock() {
   const [pills, setPills] = useState([])
   const [vaccines, setVaccines] = useState([])
   const [stock, setStock] = useState([])
+  const [search, setSearch] = useState("")
+
 
   function attAllItems() {
     const options = { method: 'GET' };
@@ -20,15 +23,17 @@ export default function Stock() {
       .then(response => response.json())
       .then(response => {
         setStock(response.items)
-        setFood(response.items.filter(e => e.itemType === "food"))
-        setPills(response.items.filter(e => e.itemType === "pills"))
-        setVaccines(response.items.filter(e => e.itemType === "vaccines"))
+        setFood(response.items.filter(e => e.itemType === "food").filter(item => item.nome.toLowerCase().includes(search.toLowerCase())))
+        setPills(response.items.filter(e => e.itemType === "pills").filter(item => item.nome.toLowerCase().includes(search.toLowerCase())))
+        setVaccines(response.items.filter(e => e.itemType === "vaccines").filter(item => item.nome.toLowerCase().includes(search.toLowerCase())))
         return
       })
 
       .catch(err => console.error(err));
   }
-
+  useEffect(() => {
+    attAllItems()
+  }, [search]);
 
   async function updateStockFront(newItem) {
     const options = {
@@ -63,6 +68,10 @@ export default function Stock() {
 
   return (
     <div className="StockReact">
+      <div className="contentInputSearchCats">
+        <BiSearchAlt className="iconInputSearchCats"/>
+        <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
+      </div>
       <h2>Stock {stockAtual}</h2>
       <div className="StockBody">
         <div className="StockMenu">
@@ -78,7 +87,7 @@ export default function Stock() {
               <span>Quantity</span>
             </div>
             {food.map((item, i) =>
-              <div key={`Item: ${i + 1}`}>
+              <div style={i % 2 === 0 ?{backgroundColor: "#975C22", color: "#F8F6F0"} : {backgroundColor: "#F8F6F0", color:"#975C22"}} key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>

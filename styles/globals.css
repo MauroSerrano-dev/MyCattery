@@ -14,8 +14,8 @@ body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-		background-color: #F8F6F0;
-		color: #975C22;
+	background-color: #F8F6F0;
+	color: #975C22;
 }
 
 a {
@@ -363,8 +363,8 @@ a {
 
 .footer {
 	bottom: 0;
-    left: 0;
-    right: 0;
+	left: 0;
+	right: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -457,7 +457,7 @@ a {
 	margin-top: -20px;
 }
 
-.stockButton{
+.stockButton {
 	width: 7px;
 	height: 13px;
 	display: flex;
@@ -466,7 +466,8 @@ a {
 	justify-content: center;
 	color: #975C22;
 }
-.stockButtons{
+
+.stockButtons {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -474,6 +475,7 @@ a {
 	gap: 2px;
 	left: 101%;
 }
+
 .stockQuantidade {
 	display: flex;
 	flex-direction: row;
@@ -482,16 +484,19 @@ a {
 	left: 96%;
 	gap: 7px;
 }
+
 .itemInfos {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding-bottom: 20px;
 }
+
 .StockList {
 	width: 80vw;
 }
-.StockBody{
+
+.StockBody {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -509,10 +514,10 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-    flex-direction: row;
+	flex-direction: row;
 	padding: 5px;
 	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .iconInputSearchCats {
@@ -526,12 +531,13 @@ a {
 	background-color: #F8F6F0;
 	border: none;
 	outline: none;
+	color: #975C22;
 }
 
 .alerta {
 	position: fixed;
 	bottom: 0;
-    right: 0;
+	right: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
