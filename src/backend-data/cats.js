@@ -20,8 +20,18 @@ async function getAllCats() {
   const result = await collection.find().toArray();
   return result;
 }
+
+async function getCatById(catId) {
+  console.log(catId)
+  const collection = await getMongoCollection(DATABASE, CATS_COLLECTION);
+  const result = await collection.findOne({ _id: new ObjectId(catId) });
+  console.log(result)
+  return result;
+}
+
 export {
     addCat,
     deleteCat,
-    getAllCats
+    getAllCats,
+    getCatById
 }

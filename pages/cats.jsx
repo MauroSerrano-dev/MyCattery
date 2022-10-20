@@ -26,15 +26,19 @@ export default function Cats() {
   return (
     <div className="CatsReact">
       <div className="contentInputSearchCats">
-        <BiSearchAlt className="iconInputSearchCats"/>
+        <BiSearchAlt className="iconInputSearchCats" />
         <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
       </div>
-      
+
       <h2>Cats</h2>
       <div className="cats">
         {cats.map((cat, i) =>
           <div className="cat" key={`Cat: ${i + 1}`}>
-            <img alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
+            <Link href={`/cat-profile?cat=${cat._id}`}>
+              <a>
+                <img alt={`${cat.name} photo`} src={`/cats-photos/${cat.photo}`}></img>
+              </a>
+            </Link>
             <div className="catInfos">
               <span>{cat.name}</span>
               <span>{cat.gender === "female" ? <BsGenderFemale style={{ color: "#ff69b4" }} /> : <BsGenderMale style={{ color: "#00bfff" }} />}</span>
