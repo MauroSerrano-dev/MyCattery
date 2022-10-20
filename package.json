@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "populate": "node src/task/populate.js",
-    "dev": "next dev",
+    "dev": "PORT=34050 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

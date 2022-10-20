@@ -2,6 +2,7 @@
 const DATABASE = "hack405";
 const CATS_COLLECTION = "cats";
 const STOCK_COLLECTION = "stock";
+const USER_COLLECTION = "users";
 const { MongoClient } = require("mongodb")
 const URL = process.env.MONGO_URL ?? "mongodb://localhost:27017"
 
@@ -30,9 +31,18 @@ async function addToStock(item) {
     const result = await collection.insertOne(item);
     return result;
 }
+async function addUser(user) {
+    const collection = await getMongoCollection(DATABASE, USER_COLLECTION);
+    const result = await collection.insertOne(user);
+    return result.insertedId;
+  }
 
 const users = [
-    
+    {
+        username: "Ema",
+        email: "ema@gmail.com",
+        password: "Ab1!"
+    }
 ]
 
 const cats = [
@@ -554,5 +564,9 @@ foods.forEach(async item => {
     await addToStock(item)
 })
 console.log("Populate Foods")
+users.forEach(async user => {
+    await addUser(user)
+})
+console.log("Populate Users")
 
 

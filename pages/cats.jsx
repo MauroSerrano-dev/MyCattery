@@ -45,7 +45,7 @@ export default function Cats() {
   return (
     <div className="CatsReact">
       <div className="topMenuButtonsStock">
-        <button onClick={() => setEditin(true)} className="addButton">Adicionar</button>
+        <button onClick={() => setEditin(true)} className="addButton">Add New Cat +</button>
         <div className="contentInputSearchCats">
           <BiSearchAlt className="iconInputSearchCats" />
           <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />

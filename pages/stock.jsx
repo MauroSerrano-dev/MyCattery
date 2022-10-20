@@ -6,6 +6,7 @@ import VaccinesIcon from '@mui/icons-material/Vaccines';
 import MedicationIcon from '@mui/icons-material/Medication';
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import { BiSearchAlt } from "react-icons/bi"
+import {HiTrash} from "react-icons/hi"
 
 export default function Stock() {
   const [stockAtual, setStockAtual] = useState("Food")
@@ -76,7 +77,18 @@ export default function Stock() {
       .catch(err => console.error(err));
 
   }
+  function handleDeleteItem(id) {
+    const options = {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: id })
+    };
 
+    fetch('/api/stock', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+  }
   useEffect(() => {
     attAllItems()
   }, [food, pills, vaccines]);
@@ -89,7 +101,7 @@ export default function Stock() {
   return (
     <div className="StockReact">
       <div className="topMenuButtonsStock">
-        <button onClick={() => setEditin(true)} className="addButton">Adicionar</button>
+        <button onClick={() => setEditin(true)} className="addButton">{`Add New ${stockAtual === "Food" ? stockAtual : stockAtual.slice(0, stockAtual.length - 1)} +`}</button>
         <div className="contentInputSearchCats">
           <BiSearchAlt className="iconInputSearchCats" />
           <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
@@ -98,9 +110,9 @@ export default function Stock() {
       <h2>{stockAtual} Stock</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon fontSize="large" /></button>
-          <button onClick={() => setStockAtual("Pills")}><MedicationIcon fontSize="large" /></button>
-          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon fontSize="large" /></button>
+          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon fontSize="large" className="iconStock" /></button>
+          <button onClick={() => setStockAtual("Pills")}><MedicationIcon fontSize="large" className="iconStock" /></button>
+          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon fontSize="large" className="iconStock" /></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">
@@ -119,15 +131,15 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "food")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "food")} className="stockButton">-</button>
                   </div>
-
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"><HiTrash /></button>
                 </div>
               </div>)}
           </div>}
           {stockAtual === "Pills" && <div className="pills">
             <div className="StockHeader">
               <span>Name</span>
-              <span>Validade</span>
-              <span>Quantidadee</span>
+              <span>Expiration date</span>
+              <span>Quantity</span>
             </div>
             {pills.map((item, i) =>
               <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
@@ -139,14 +151,15 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "pills")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "pills")} className="stockButton">-</button>
                   </div>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
                 </div>
               </div>)}
           </div>}
           {stockAtual === "Vaccines" && <div className="vaccines">
             <div className="StockHeader">
               <span>Name</span>
-              <span>Validade</span>
-              <span>Quantidadee</span>
+              <span>Expiration date</span>
+              <span>Quantity</span>
             </div>
             {vaccines.map((item, i) =>
               <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
@@ -158,12 +171,13 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "vaccines")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "vaccines")} className="stockButton">-</button>
                   </div>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton deleteItem"></button>
                 </div>
               </div>)}
           </div>}
         </div>
       </div>
-       {editin && <div className="addDiv">
+      {editin && <div className="addDiv">
         <div>
           <p>Name: </p>
           <input type={"text"} onChange={(e) => setNameImput(e.target.value)} />

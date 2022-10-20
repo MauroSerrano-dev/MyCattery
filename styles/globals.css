@@ -472,8 +472,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	margin-top: -25px;
+	margin-top: -50px;
 	gap: 2px;
+	top: 27px;
 	left: 103%;
 }
 
@@ -492,6 +493,7 @@ a {
 	justify-content: center;
 	padding: 10px;
 	padding-right: 20px;
+	padding-bottom: 0px;
 }
 
 .StockList {
@@ -571,3 +573,64 @@ a {
 	gap: 59vw;
 }
 /* ------------END-------------- */
+
+
+.addButton {
+	color: #F8F6F0;
+	height: 30px;
+	width: 150px;
+	background-color: #C4955D;
+	border: none;
+	border-radius: 10px;
+	transition-duration: 400ms;
+	font-size: small;
+}
+
+.addButton:hover {
+	transition-duration: 400ms;
+	color: #975C22;
+}
+
+
+.stockButton {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #975C22;
+	color: #975C22;
+	background-color: #F8F6F0;
+	border-radius: 5px;
+	font-size: medium;
+	transition-duration: 400ms;
+}
+
+.stockButton:hover {
+	transition-duration: 400ms;
+	color: #F8F6F0;
+	background-color: #975C22;
+}
+
+.iconStock {
+	transition-duration: 400ms;
+}
+
+.iconStock:hover {
+	width: 40px;
+	height: 40px;
+	transition-duration: 400ms;
+}
+
+.deleteItem{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: -17px;
+	left: 106.3%;
+}
+
+.foodGrafic {
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #975C22;
+}
