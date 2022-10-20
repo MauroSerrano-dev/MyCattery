@@ -47,8 +47,8 @@ export default function Alerta() {
 
   return (
     <div className="alerta">
-      {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) <= 250 && <Alert className="alert" severity="warning">{Math.floor(totalFood / (cats.length * ONE_PORTION)) == 1 ? `Lembrete: Ficará sem ração no próximo dia.` : `Lembrete: Ficará sem ração em ${Math.floor(totalFood / (cats.length * ONE_PORTION))} dias.`}</Alert>}
-      <Image src={Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) <= 250 ? nekoAlert : neko} alt="neko" width="100px" height="100px" />
+      {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) <= 263 && <Alert className="alert" severity="warning">{Math.floor(totalFood / (cats.length * ONE_PORTION)) == 1 ? `Lembrete: Ficará sem ração no próximo dia.` : `Lembrete: Ficará sem ração em ${Math.floor(totalFood / (cats.length * ONE_PORTION))} dias.`}</Alert>}
+      <Image src={Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) <= 263 ? nekoAlert : neko} alt="neko" width="100px" height="100px" />
     </div>
   );
 }
