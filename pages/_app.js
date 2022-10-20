@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Menu from "./menu";
 import Foot from "./foot";
 import { useState } from "react";
+import Alerta from "./alerta";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Menu />
       <Component {...pageProps} />
       <Foot />
+      <Alerta />
     </div>
   );
 }
