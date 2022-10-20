@@ -76,7 +76,18 @@ export default function Stock() {
       .catch(err => console.error(err));
 
   }
+  function handleDeleteItem(id) {
+    const options = {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: id })
+    };
 
+    fetch('/api/stock', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+  }
   useEffect(() => {
     attAllItems()
   }, [food, pills, vaccines]);
@@ -89,7 +100,7 @@ export default function Stock() {
   return (
     <div className="StockReact">
       <div className="topMenuButtonsStock">
-        <button onClick={() => setEditin(true)} className="addButton">{`Add New ${stockAtual === "Food" ?stockAtual : stockAtual.slice(0, stockAtual.length - 1)} +`}</button>
+        <button onClick={() => setEditin(true)} className="addButton">{`Add New ${stockAtual === "Food" ? stockAtual : stockAtual.slice(0, stockAtual.length - 1)} +`}</button>
         <div className="contentInputSearchCats">
           <BiSearchAlt className="iconInputSearchCats" />
           <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
@@ -119,7 +130,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "food")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "food")} className="stockButton">-</button>
                   </div>
-
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
                 </div>
               </div>)}
           </div>}
@@ -139,6 +150,7 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "pills")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "pills")} className="stockButton">-</button>
                   </div>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
                 </div>
               </div>)}
           </div>}
@@ -158,12 +170,13 @@ export default function Stock() {
                     <button onClick={() => handleQuantChange("plus", i, "vaccines")} className="stockButton">+</button>
                     <button onClick={() => handleQuantChange("less", i, "vaccines")} className="stockButton">-</button>
                   </div>
+                  <button onClick={() => handleDeleteItem(item._id)} className="stockButton"></button>
                 </div>
               </div>)}
           </div>}
         </div>
       </div>
-       {editin && <div className="addDiv">
+      {editin && <div className="addDiv">
         <div>
           <p>Name: </p>
           <input type={"text"} onChange={(e) => setNameImput(e.target.value)} />
