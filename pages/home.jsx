@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </div>
       <div className="alerta">
-        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) && alert("Eu sou o Pedro")}
+        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) < 7 && alert("Eu sou o Pedro")}
       </div>
     </div>
   );
