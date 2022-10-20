@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 import Link from 'next/link'
 
 /* Icons */
@@ -50,17 +50,22 @@ export default function Stock() {
             </div>
             {food.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
-                <div className="catInfos">
-                  <span>{item.nome}</span>
-                  <span>{item.validade}</span>
-                  <span>{item.quantidade}</span>
+                <div className="itemInfos">
+                  <span className="stockItemName">{item.nome}</span>
+                  <span className="stockValidade">{item.validade}</span>
+                  <span className="stockQuantidade">{item.quantidade}g
+                  <div className="stockButtons">
+                    <button className="stockButton">+</button>
+                    <button className="stockButton">-</button>
+                  </div></span>
+                  
                 </div>
               </div>)}
           </div>}
           {stockAtual === "Pills" && <div className="pills">
             {pills.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
-                <div className="catInfos">
+                <div className="itemInfos">
                   <span>{item.quantidade}</span>
                   <span>{item.validade}</span>
                 </div>
@@ -69,7 +74,7 @@ export default function Stock() {
           {stockAtual === "Vaccines" && <div className="vaccines">
             {vaccines.map((item, i) =>
               <div key={`Item: ${i + 1}`}>
-                <div className="catInfos">
+                <div className="itemInfos">
                   <span>{item.quantidade}</span>
                   <span>{item.validade}</span>
                 </div>

@@ -15,9 +15,11 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "backend": "*",
+    "bootstrap": "^5.2.2",
     "mongodb": "^4.11.0",
     "next": "^12.3.1",
     "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0"
   },
