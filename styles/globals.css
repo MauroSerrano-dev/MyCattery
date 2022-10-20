@@ -14,6 +14,8 @@ body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		background-color: #F8F6F0;
+		color: #975C22;
 }
 
 a {
@@ -33,7 +35,7 @@ a {
 
 	body {
 		color: #975C22;
-		background: #F8F6F0;
+		background-color: #F8F6F0;
 	}
 }
 
@@ -48,7 +50,7 @@ a {
 	background-size: cover;
 	width: 100%;
 	height: 50px;
-	margin-bottom: 70px;
+	margin-bottom: 30px;
 	background-color: #C4955D;
 }
 
@@ -349,9 +351,13 @@ a {
 /* Footer */
 
 .footer {
+	bottom: 0;
+    left: 0;
+    right: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-top: 30px;
 }
 
 /* ------------END-------------- */
@@ -427,3 +433,48 @@ a {
 
 /* ------------END-------------- */
 
+
+
+/* search bar cats */
+
+.contentInputSearchCats {
+	background-color: #F8F6F0;
+	border: 2px solid #975C22;
+	gap: 5px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+    flex-direction: row;
+	padding: 5px;
+	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.iconInputSearchCats {
+	color: #975C22;
+	background-color: #F8F6F0;
+	width: 25px;
+	height: 25px;
+}
+
+.inputSearchCats {
+	background-color: #F8F6F0;
+	border: none;
+	outline: none;
+}
+
+
+
+
+
+
+.alerta {
+	position: fixed;
+	bottom: 0;
+    right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F8F6F0;
+}

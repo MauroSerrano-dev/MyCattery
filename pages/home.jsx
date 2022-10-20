@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link'
 import { getAllFoodKg } from "./stock";
+import { Alert } from "@mui/material";
+import Image from "next/image"
+import nekoAlert from "../public/icones/neko/Neko2-09.png"
 const ONE_PORTION = 150
 
 export default function Home() {
@@ -47,6 +50,7 @@ export default function Home() {
 
   return (
     <div className="DashboardReact">
+      
       <div className="grafics">
       <div className="foodGrafic">
         <h2>Porções restantes: {(totalFood / ONE_PORTION).toFixed(1)}</h2>
@@ -55,10 +59,12 @@ export default function Home() {
       </div>
       <div className="chartGrafic">
         </div>
-      </div>
       <div className="alerta">
-        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) < 7 && alert("Eu sou o Pedro")}
+        {Number((totalFood / (cats.length * ONE_PORTION)).toFixed(1)) < 7 && <Alert className="alert" severity="warning">This is a warning alert — check it out!</Alert>}
+        <Image src={nekoAlert} alt="neko" width="100px" height="100px"/>
       </div>
+      </div>
+      
     </div>
   );
 }
