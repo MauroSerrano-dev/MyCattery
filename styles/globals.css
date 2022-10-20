@@ -41,6 +41,12 @@ a {
 
 /* Menu */
 
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .menu {
 	display: flex;
 	flex-direction: column;
@@ -52,6 +58,11 @@ a {
 	height: 50px;
 	margin-bottom: 30px;
 	background-color: #C4955D;
+}
+
+.iconMenu {
+	width: 15px;
+	height: 15px;
 }
 
 .abas {
@@ -126,7 +137,7 @@ a {
 .isLoggedIn button {
 	width: 100px;
 	height: 30px;
-	background-color: #975C22;
+	background-color: #C4955D;
 	border: none;
 	color: #F8F6F0;
 	border-radius: 5px;
@@ -136,8 +147,8 @@ a {
 .isLoggedIn button:hover {
 	width: 100px;
 	height: 30px;
-	color: #F8F6F0;
-	background-color: #975C22;
+	color: #975C22;
+	background-color: #C4955D;
 	transition-duration: 400ms;
 }
 

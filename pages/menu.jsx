@@ -3,12 +3,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { isLogged } from "./login";
 import { useEffect } from "react";
+import logo from "../public/icones/logo/MyCattery_logo_white.png"
 
 /* Icons */
 
 import {FaCat} from "react-icons/fa"
 import {RiNumbersFill} from "react-icons/ri"
 import {MdSpaceDashboard} from "react-icons/md"
+import Image from "next/image";
 
 export function refreshPage() {
   window.location.reload();
@@ -61,30 +63,21 @@ export default function Menu() {
 
   return (
     <div className="menu">
+      <Image src={logo} className="logo" alt="logo" width="100px" height="100px"/>
       <div className="abas">
         <Link href="/home">
           <a>
-            <button disabled={router.asPath === "/home"}><MdSpaceDashboard /> Dashboard</button>
+            <button disabled={router.asPath === "/home"}><MdSpaceDashboard className="iconMenu"/> Dashboard</button>
           </a>
         </Link>
         <Link href="/cats">
           <a>
-            <button disabled={router.asPath === "/cats"}><FaCat/> Cats</button>
+            <button disabled={router.asPath === "/cats"}><FaCat className="iconMenu"/> Cats</button>
           </a>
         </Link>
         <Link href="/stock">
           <a>
-            <button disabled={router.asPath === "/stock"}><RiNumbersFill/> Stock</button>
-          </a>
-        </Link>
-        <Link href="/page3">
-          <a>
-            <button disabled={router.asPath === "/page3"}>Page 3</button>
-          </a>
-        </Link>
-        <Link href="/page4">
-          <a>
-            <button disabled={router.asPath === "/page4"}>Page 4</button>
+            <button disabled={router.asPath === "/stock"}><RiNumbersFill className="iconMenu"/> Stock</button>
           </a>
         </Link>
       </div>
