@@ -598,4 +598,21 @@ a {
 	background-color: #F8F6F0;
 	border-radius: 5px;
 	font-size: medium;
+	transition-duration: 400ms;
+}
+
+.stockButton:hover {
+	transition-duration: 400ms;
+	color: #F8F6F0;
+	background-color: #975C22;
+}
+
+.iconStock {
+	transition-duration: 400ms;
+}
+
+.iconStock:hover {
+	width: 40px;
+	height: 40px;
+	transition-duration: 400ms;
 }
