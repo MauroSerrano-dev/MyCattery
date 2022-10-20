@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Menu />
       <Component {...pageProps} />
-      <Foot />
       <Alerta />
     </div>
   );

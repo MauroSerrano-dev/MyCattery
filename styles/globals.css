@@ -634,3 +634,7 @@ a {
 	justify-content: space-evenly;
 	border: 1px solid #975C22;
 }
+
+.chartGrafic {
+	height: 400px;
+}
