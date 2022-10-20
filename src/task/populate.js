@@ -115,8 +115,7 @@ const cats = [
     },
 ]
 
-
-const stock = [
+const pills = [
     {
         itemType: "pills",
         nome: "Milpro",
@@ -176,7 +175,10 @@ const stock = [
         nome: "We Confort",
         quantidade: "7",
         validade: "07/10/23"
-    },
+    }
+]
+
+const vaccines = [
     {
         itemType: "vaccines",
         nome: "Nobivac tricat",
@@ -189,6 +191,10 @@ const stock = [
         quantidade: "45",
         validade: "17/07/24"
     },
+]
+
+const foods = [
+
     {
         itemType: "food",
         nome: "Royal Canin Neutered Satiety Cat 10kg",
@@ -532,9 +538,17 @@ cats.forEach(async cat => {
     await addCat(cat)
 })
 console.log("Populate Cats")
-stock.forEach(async item => {
+pills.forEach(async item => {
     await addToStock(item)
 })
-console.log("Populate Stock")
+console.log("Populate Pills")
+vaccines.forEach(async item => {
+    await addToStock(item)
+})
+console.log("Populate Vaccines")
+foods.forEach(async item => {
+    await addToStock(item)
+})
+console.log("Populate Foods")
 
 

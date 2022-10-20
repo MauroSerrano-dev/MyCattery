@@ -15,7 +15,6 @@ export default function Home() {
     fetch('/api/stock', options)
       .then(response => response.json())
       .then(response => {
-        console.log(response.items.filter(e => e.itemType === "food"))
         setFood(response.items.filter(e => e.itemType === "food"))
         setTotalFood(
           response.items

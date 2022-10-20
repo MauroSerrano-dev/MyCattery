@@ -11,6 +11,7 @@ export default function Stock() {
   const [food, setFood] = useState([])
   const [pills, setPills] = useState([])
   const [vaccines, setVaccines] = useState([])
+  const [stock, setStock] = useState([])
 
   function attAllItems() {
     const options = { method: 'GET' };
@@ -18,6 +19,7 @@ export default function Stock() {
     fetch('/api/stock', options)
       .then(response => response.json())
       .then(response => {
+        setStock(response.items)
         setFood(response.items.filter(e => e.itemType === "food"))
         setPills(response.items.filter(e => e.itemType === "pills"))
         setVaccines(response.items.filter(e => e.itemType === "vaccines"))
@@ -27,6 +29,27 @@ export default function Stock() {
       .catch(err => console.error(err));
   }
 
+
+  async function updateStockFront(newItem) {
+    const options = {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ itemAtt: { newItem } }),
+    };
+
+    const response = await fetch("/api/stock", options);
+    const json = await response.json();
+  }
+
+  function handleQuantChange(action, index) {
+    const newQuantidade = action === "plus" ? String(Number(food[index].quantidade) + 1) : String(Number(food[index].quantidade) - 1)
+    const obj = food[index]
+    updateStockFront({...obj, quantidade: newQuantidade})
+  }
+
+  useEffect(() => {
+    attAllItems()
+  }, [food]);
 
   useEffect(() => {
     attAllItems()
@@ -54,11 +77,11 @@ export default function Stock() {
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
                   <span className="stockQuantidade">{item.quantidade}g
-                  <div className="stockButtons">
-                    <button className="stockButton">+</button>
-                    <button className="stockButton">-</button>
-                  </div></span>
-                  
+                    <div className="stockButtons">
+                      <button onClick={() => handleQuantChange("plus", i)} className="stockButton">+</button>
+                      <button onClick={() => handleQuantChange("less", i)} className="stockButton">-</button>
+                    </div></span>
+
                 </div>
               </div>)}
           </div>}

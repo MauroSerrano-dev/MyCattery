@@ -22,8 +22,19 @@ async function getAllItems() {
   return result;
 }
 
+async function updateStock(id, data) {
+  console.log({...data.newItem})
+  const collection = await getMongoCollection(DATABASE, STOCK_COLLECTION);
+  const result = await collection.updateOne(
+    { _id: ObjectId(id) },
+    { $set: { ...data.newItem } }
+  );
+  return result;
+}
+
 export {
     addToStock,
     deleteItem,
-    getAllItems
+    getAllItems,
+    updateStock
 }
