@@ -89,7 +89,7 @@ export default function Stock() {
   return (
     <div className="StockReact">
       <div className="topMenuButtonsStock">
-        <button onClick={() => setEditin(true)} className="addButton">Adicionar</button>
+        <button onClick={() => setEditin(true)} className="addButton">{`Add New ${stockAtual === "Food" ?stockAtual : stockAtual.slice(0, stockAtual.length - 1)} +`}</button>
         <div className="contentInputSearchCats">
           <BiSearchAlt className="iconInputSearchCats" />
           <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
