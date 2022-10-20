@@ -137,8 +137,8 @@ export default function Stock() {
           {stockAtual === "Pills" && <div className="pills">
             <div className="StockHeader">
               <span>Name</span>
-              <span>Validade</span>
-              <span>Quantidadee</span>
+              <span>Expiration date</span>
+              <span>Quantity</span>
             </div>
             {pills.map((item, i) =>
               <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
@@ -157,8 +157,8 @@ export default function Stock() {
           {stockAtual === "Vaccines" && <div className="vaccines">
             <div className="StockHeader">
               <span>Name</span>
-              <span>Validade</span>
-              <span>Quantidadee</span>
+              <span>Expiration date</span>
+              <span>Quantity</span>
             </div>
             {vaccines.map((item, i) =>
               <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
