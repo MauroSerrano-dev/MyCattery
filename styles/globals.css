@@ -392,11 +392,6 @@ a {
 	border: none;
 }
 
-
-
-/* ------------END-------------- */
-
-/* Stock */
 .CatsReact {
 	display: flex;
 	flex-direction: column;
@@ -437,8 +432,59 @@ a {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	padding-bottom: 20px;
+	font-weight: bold;
 }
 
+.stockValidade {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	left: 46%;
+	margin-top: -20px;
+}
+
+.stockButton{
+	width: 7px;
+	height: 13px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #975C22;
+}
+.stockButtons{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: -25px;
+	gap: 2px;
+	left: 101%;
+}
+.stockQuantidade {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	margin-top: -20px;
+	left: 96%;
+	gap: 7px;
+}
+.itemInfos {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.StockList {
+	width: 80vw;
+}
+.StockBody{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
 
 
 
@@ -470,11 +516,6 @@ a {
 	border: none;
 	outline: none;
 }
-
-
-
-
-
 
 .alerta {
 	position: fixed;

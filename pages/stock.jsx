@@ -44,7 +44,7 @@ export default function Stock() {
   function handleQuantChange(action, index) {
     const newQuantidade = action === "plus" ? String(Number(food[index].quantidade) + 1) : String(Number(food[index].quantidade) - 1)
     const obj = food[index]
-    updateStockFront({...obj, quantidade: newQuantidade})
+    updateStockFront({ ...obj, quantidade: newQuantidade })
   }
 
   useEffect(() => {
@@ -77,10 +77,11 @@ export default function Stock() {
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
                   <span className="stockQuantidade">{item.quantidade}g
-                    <div className="stockButtons">
-                      <button onClick={() => handleQuantChange("plus", i)} className="stockButton">+</button>
-                      <button onClick={() => handleQuantChange("less", i)} className="stockButton">-</button>
-                    </div></span>
+                  </span>
+                  <div className="stockButtons">
+                    <button onClick={() => handleQuantChange("plus", i)} className="stockButton">+</button>
+                    <button onClick={() => handleQuantChange("less", i)} className="stockButton">-</button>
+                  </div>
 
                 </div>
               </div>)}
