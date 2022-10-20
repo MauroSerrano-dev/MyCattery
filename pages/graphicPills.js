@@ -17,7 +17,8 @@ export const MyResponsiveBarPills = ({ data/* see data tab */ }) => (
             'Cerenia',
             'Propalin',
             'Vectra 3D',
-            'Amodip 1.25'
+            'Amodip 1.25',
+            'Apoquel 3.6'
         ]}
         indexBy="Type"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}

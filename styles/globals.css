@@ -646,9 +646,14 @@ a {
 	justify-content: space-evenly;
 	border: 1px solid #975C22;
 }
+.foodGrafic h2{
+	font-weight: normal;
+}
 
 .chartGrafic {
 	height: 400px;
+	padding-left: 250px;
+	padding-right: 250px;
 }
 .catProfileReact{
 	display: flex;

@@ -80,18 +80,20 @@ export default function Home() {
           {pills.length > 0 && 
           <MyResponsiveBarPills data={[{
             "Type": "Pills",
-            "Milpro": Number(pills.find(onepills => onepills.nome === "Milpro").quantidade),
+            "Milpro": Number(pills.find(onepills => onepills.nome === "Milpro")?.quantidade),
             "hot dogColor": "hsl(119, 70%, 50%)",
-            "Acticam": Number(pills.find(onepills => onepills.nome === "Acticam").quantidade),
+            "Acticam": Number(pills.find(onepills => onepills.nome === "Acticam")?.quantidade),
             "burgerColor": "hsl(328, 70%, 50%)",
-            "Cerenia": Number(pills.find(onepills => onepills.nome === "Cerenia").quantidade),
+            "Cerenia": Number(pills.find(onepills => onepills.nome === "Cerenia")?.quantidade),
             "sandwichColor": "hsl(292, 70%, 50%)",
-            "Propalin": Number(pills.find(onepills => onepills.nome === "Propalin").quantidade),
+            "Propalin": Number(pills.find(onepills => onepills.nome === "Propalin")?.quantidade),
             "kebabColor": "hsl(73, 70%, 50%)",
-            "Vectra 3D": Number(pills.find(onepills => onepills.nome === "Vectra 3D").quantidade),
+            "Vectra 3D": Number(pills.find(onepills => onepills.nome === "Vectra 3D")?.quantidade),
             "friesColor": "hsl(332, 70%, 50%)",
-            "Amodip 1.25": Number(pills.find(onepills => onepills.nome === "Amodip 1.25").quantidade),
-            "donutColor": "hsl(277, 70%, 50%)"
+            "Amodip 1.25": Number(pills.find(onepills => onepills.nome === "Amodip 1.25")?.quantidade),
+            "donutColor": "hsl(277, 70%, 50%)",
+            "Apoquel 3.6": Number(pills.find(onepills => onepills.nome === "Apoquel 3.6")?.quantidade),
+            "ApoquelColor": "hsl(20, 70%, 50%)",
           }]} />
           }
         </div>
