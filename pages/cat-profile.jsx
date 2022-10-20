@@ -21,9 +21,19 @@ export default function catProfile() {
   useEffect(() => {
     getCat();
   }, []);
-  
+
+  if(!cat) {
+    return <div>Loading screens</div>
+  }
+
   return (
     <div className="catProfileReact">
+      <h2>{`Profile ${cat.gender === "female" ? "da" : "do"} ${cat.name}`}</h2>
+      <h2>{`Age: ${cat.age}`}</h2>
+      <h2>{`Neutered: ${cat.neutered === "true" ? "Yes" : "No"}`}</h2>
+      <h2>{`Color: ${cat.color}`}</h2>
+      <h2>{`Personality: ${cat.personality}`}</h2>
+      <img src={`/cats-photos/${cat.photo}`}/>
     </div>
   );
 }

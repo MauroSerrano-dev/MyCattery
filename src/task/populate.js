@@ -41,81 +41,81 @@ const cats = [
         photo: "Cleo.jpg",
         gender: "female",
         age: "2 months",
-        castrado: false,
-        cor: "tartaruga",
-        personalidade: "hiperativa"
+        neutered: false,
+        color: "Turtle",
+        personality: "Hyperactive"
     },
     {
         name: "Cleopatra",
         photo: "Cleopatra.jpg",
         gender: "female",
         age: "1 year old",
-        castrado: true,
-        cor: "tartaruga",
-        personalidade: "sociavel"
+        neutered: true,
+        color: "Turtle",
+        personality: "Sociable"
     },
     {
         name: "Floquinho",
         photo: "Floquinho.jpg",
         gender: "male",
         age: "2 months",
-        castrado: false,
-        cor: "branco",
-        personalidade: "sociavel"
+        neutered: false,
+        color: "White",
+        personality: "Sociable"
     },
     {
         name: "Frankie",
         photo: "Frankie.jpg",
         gender: "male",
         age: "1 year old",
-        castrado: true,
-        cor: "laranja",
-        personalidade: "arisco"
+        neutered: true,
+        color: "Orange",
+        personality: "Skittish"
     },
     {
         name: "Isa",
         photo: "Isa.jpg",
         gender: "female",
         age: "5 years old",
-        castrado: true,
-        cor: "Branco e cinza",
-        personalidade: "medrosa"
+        neutered: true,
+        color: "White and Grey",
+        personality: "Scared"
     },
     {
         name: "Pamela",
         photo: "Pamela.jpg",
         gender: "female",
         age: "4 months",
-        castrado: false,
-        cor: "Tigrada",
-        personalidade: "sociavel"
+        neutered: false,
+        color: "Grey Brindle",
+        personality: "Sociable"
     },
     {
         name: "Sebastião",
         photo: "Sebastião.jpg",
         gender: "male",
         age: "2 months",
-        castrado: false,
-        cor: "Branco e preto",
-        personalidade: "hiperativo"
+        neutered: false,
+        color: "White and Black",
+        personality: "Hyperactive"
     },
     {
         name: "Tsuki",
         photo: "Tsuki.jpg",
         gender: "male",
         age: "2 months",
-        castrado: false,
-        cor: "Neve",
-        personalidade: "sociavel"
+        neutered: false,
+        color: "Snow",
+        personality: "Sociable"
     },
     {
         name: "Winnie",
         photo: "Winnie.jpg",
         gender: "female",
-        age: "1 ano",
-        castrado: true,
-        cor: "Laranja",
-        personalidade: "arisca"
+        age: "1 year old",
+        neutered: true,
+        color: "Orange",
+        personality: "Skittish"
     },
 ]
 
