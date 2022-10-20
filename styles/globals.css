@@ -628,3 +628,9 @@ a {
 	top: -17px;
 	left: 106.3%;
 }
+
+.foodGrafic {
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #975C22;
+}
