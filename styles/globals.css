@@ -545,3 +545,29 @@ a {
 	justify-content: center;
 	background-color: transparent;
 }
+
+/* ADD ITEMS */
+.addDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	top: 150px;
+	border-radius: 10px;
+	background: #e0e0e0;
+	box-shadow: 14px 14px 28px #8b8b8b,
+		-14px -14px 28px #ffffff;
+		padding: 20px;
+	z-index: 10px;
+}
+.addDiv p{
+	margin: 5px;
+}
+.topMenuButtonsStock{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 59vw;
+}
+/* ------------END-------------- */

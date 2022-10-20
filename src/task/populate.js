@@ -31,6 +31,10 @@ async function addToStock(item) {
     return result;
 }
 
+const users = [
+    
+]
+
 const cats = [
     {
         name: "Cleo",

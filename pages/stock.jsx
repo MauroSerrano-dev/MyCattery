@@ -14,6 +14,10 @@ export default function Stock() {
   const [vaccines, setVaccines] = useState([])
   const [stock, setStock] = useState([])
   const [search, setSearch] = useState("")
+  const [editin, setEditin] = useState(false)
+  const [nameImput, setNameImput] = useState("")
+  const [quantidadeImput, setQuantidadeImput] = useState("")
+  const [validadeImput, setValidadeImput] = useState("")
 
 
   function attAllItems() {
@@ -58,19 +62,38 @@ export default function Stock() {
     updateStockFront({ ...obj, quantidade: newQuantidade })
   }
 
+  function handleAddItem() {
+    setEditin(false)
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ itemType: stockAtual.toLowerCase(), nome: nameImput, quantidade: quantidadeImput, validade: validadeImput })
+    };
+
+    fetch('/api/stock', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+
+  }
+
   useEffect(() => {
     attAllItems()
   }, [food, pills, vaccines]);
 
   useEffect(() => {
     attAllItems()
+    setEditin(false)
   }, []);
 
   return (
     <div className="StockReact">
-      <div className="contentInputSearchCats">
-        <BiSearchAlt className="iconInputSearchCats"/>
-        <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
+      <div className="topMenuButtonsStock">
+        <button onClick={() => setEditin(true)} className="addButton">Adicionar</button>
+        <div className="contentInputSearchCats">
+          <BiSearchAlt className="iconInputSearchCats" />
+          <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
+        </div>
       </div>
       <h2>{stockAtual} Stock</h2>
       <div className="StockBody">
@@ -87,7 +110,7 @@ export default function Stock() {
               <span>Quantity</span>
             </div>
             {food.map((item, i) =>
-              <div style={i % 2 === 0 ?{backgroundColor: "#975C22", color: "#F8F6F0"} : {backgroundColor: "#F8F6F0", color:"#975C22"}} key={`Item: ${i + 1}`}>
+              <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
@@ -107,7 +130,7 @@ export default function Stock() {
               <span>Quantidadee</span>
             </div>
             {pills.map((item, i) =>
-              <div style={i % 2 === 0 ?{backgroundColor: "#975C22", color: "#F8F6F0"} : {backgroundColor: "#F8F6F0", color:"#975C22"}} key={`Item: ${i + 1}`}>
+              <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
@@ -120,13 +143,13 @@ export default function Stock() {
               </div>)}
           </div>}
           {stockAtual === "Vaccines" && <div className="vaccines">
-          <div className="StockHeader">
+            <div className="StockHeader">
               <span>Name</span>
               <span>Validade</span>
               <span>Quantidadee</span>
             </div>
             {vaccines.map((item, i) =>
-              <div style={i % 2 === 0 ?{backgroundColor: "#975C22", color: "#F8F6F0"} : {backgroundColor: "#F8F6F0", color:"#975C22"}} key={`Item: ${i + 1}`}>
+              <div style={i % 2 === 0 ? { backgroundColor: "#975C22", color: "#F8F6F0" } : { backgroundColor: "#F8F6F0", color: "#975C22" }} key={`Item: ${i + 1}`}>
                 <div className="itemInfos">
                   <span className="stockItemName">{item.nome}</span>
                   <span className="stockValidade">{item.validade}</span>
@@ -140,6 +163,24 @@ export default function Stock() {
           </div>}
         </div>
       </div>
+       {editin && <div className="addDiv">
+        <div>
+          <p>Name: </p>
+          <input type={"text"} onChange={(e) => setNameImput(e.target.value)} />
+        </div>
+        <div>
+          <p>Expiration date: </p>
+          <input type={"text"} onChange={(e) => setValidadeImput(e.target.value)} />
+        </div>
+        <div>
+          <p>Quantity: </p>
+          <input type={"text"} onChange={(e) => setQuantidadeImput(e.target.value)} />
+        </div>
+        <div className="buttonsAddDiv">
+          <button onClick={() => setEditin(false)} >Voltar</button>
+          <button onClick={() => handleAddItem()} >Confirme</button>
+        </div>
+      </div>}
     </div>
   );
 }
