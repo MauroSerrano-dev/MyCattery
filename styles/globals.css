@@ -571,3 +571,31 @@ a {
 	gap: 59vw;
 }
 /* ------------END-------------- */
+
+
+.addButton {
+	color: #F8F6F0;
+	height: 25px;
+	width: 120px;
+	background-color: #C4955D;
+	border: none;
+	border-radius: 10px;
+	transition-duration: 400ms;
+	font-size: small;
+}
+
+.addButton:hover {
+	transition-duration: 400ms;
+	color: #975C22;
+}
+
+
+.stockButton {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #975C22;
+	color: #975C22;
+	background-color: #F8F6F0;
+	border-radius: 5px;
+	font-size: medium;
+}
