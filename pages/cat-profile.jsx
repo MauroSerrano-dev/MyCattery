@@ -28,12 +28,14 @@ export default function catProfile() {
 
   return (
     <div className="catProfileReact">
-      <h2>{`Profile ${cat.gender === "female" ? "da" : "do"} ${cat.name}`}</h2>
-      <h2>{`Age: ${cat.age}`}</h2>
-      <h2>{`Neutered: ${cat.neutered === "true" ? "Yes" : "No"}`}</h2>
-      <h2>{`Color: ${cat.color}`}</h2>
-      <h2>{`Personality: ${cat.personality}`}</h2>
-      <img src={`/cats-photos/${cat.photo}`}/>
+      <img src={`/cats-photos/${cat.photo}`} className="catFoto"/>
+      <div className="catDesc">
+      <h2 className="catName">{`Profile ${cat.gender === "female" ? "da" : "do"} ${cat.name}`}</h2>
+      <h2 className="catFeatures">{`Age: ${cat.age}`}</h2>
+      <h2 className="catFeatures">{`Neutered: ${cat.neutered === "true" ? "Yes" : "No"}`}</h2>
+      <h2 className="catFeatures">{`Color: ${cat.color}`}</h2>
+      <h2 className="catFeatures">{`Personality: ${cat.personality}`}</h2>
+      </div>
     </div>
   );
 }
