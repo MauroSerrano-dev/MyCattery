@@ -72,12 +72,12 @@ export default function Stock() {
         <BiSearchAlt className="iconInputSearchCats"/>
         <input className="inputSearchCats" type={"text"} onChange={(e) => setSearch(e.target.value)} />
       </div>
-      <h2>Stock {stockAtual}</h2>
+      <h2>{stockAtual} Stock</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon /></button>
-          <button onClick={() => setStockAtual("Pills")}><MedicationIcon /></button>
-          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon /></button>
+          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon fontSize="large" /></button>
+          <button onClick={() => setStockAtual("Pills")}><MedicationIcon fontSize="large" /></button>
+          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon fontSize="large" /></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">

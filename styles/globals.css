@@ -41,11 +41,6 @@ a {
 
 /* Menu */
 
-.logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .menu {
 	display: flex;
@@ -60,6 +55,12 @@ a {
 	background-color: #C4955D;
 }
 
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .iconMenu {
 	width: 15px;
 	height: 15px;
@@ -70,7 +71,7 @@ a {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	gap: 10px;
+	gap: 15px;
 
 }
 
@@ -79,7 +80,7 @@ a {
 	top: 10px;
 	right: 50px;
 	display: flex;
-	gap: 10px;
+	gap: 15px;
 
 }
 
