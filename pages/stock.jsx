@@ -109,9 +109,9 @@ export default function Stock() {
       <h2>{stockAtual} Stock</h2>
       <div className="StockBody">
         <div className="StockMenu">
-          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon fontSize="large" /></button>
-          <button onClick={() => setStockAtual("Pills")}><MedicationIcon fontSize="large" /></button>
-          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon fontSize="large" /></button>
+          <button onClick={() => setStockAtual("Food")}><LocalDiningIcon fontSize="large" className="iconStock" /></button>
+          <button onClick={() => setStockAtual("Pills")}><MedicationIcon fontSize="large" className="iconStock" /></button>
+          <button onClick={() => setStockAtual("Vaccines")}><VaccinesIcon fontSize="large" className="iconStock" /></button>
         </div>
         <div className="StockList">
           {stockAtual === "Food" && <div className="food">
